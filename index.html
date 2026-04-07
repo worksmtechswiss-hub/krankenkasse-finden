@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krankenkasse Finden — Kostenloser Krankenkassen-Vergleich Schweiz</title>
+  <meta name="description" content="Vergleichen Sie Schweizer Krankenkassen kostenlos und unverbindlich. Finden Sie die beste und günstigste Krankenversicherung für Ihre Bedürfnisse.">
+  <meta name="keywords" content="Krankenkasse, Vergleich, Schweiz, Krankenversicherung, Prämien, Grundversicherung, Zusatzversicherung">
+  <meta property="og:title" content="Krankenkasse Finden — Kostenloser Vergleich Schweiz">
+  <meta property="og:description" content="Jetzt Krankenkassen vergleichen und sparen. Kostenlos & unverbindlich.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://krankenkasse-finden.ch/">
+  <link rel="canonical" href="https://krankenkasse-finden.ch/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Krankenkasse Finden",
+    "url": "https://krankenkasse-finden.ch",
+    "description": "Kostenloser Krankenkassen-Vergleich für die Schweiz",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CHF",
+      "description": "Kostenloser und unverbindlicher Krankenkassen-Vergleich"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="form-container">
+    <!-- Header -->
+    <div class="form-header">
+      <div class="logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="8" fill="#1a365d"/>
+          <path d="M18 8 L18 28 M8 18 L28 18" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">Krankenkasse Finden</span>
+          <span class="logo-subtitle">Kostenloser Krankenkassen-Vergleich</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="step active" data-step="1">
+        <div class="step-circle">1</div>
+        <span class="step-label">Persönliches</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step="2">
+        <div class="step-circle">2</div>
+        <span class="step-label">Versicherung</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step="3">
+        <div class="step-circle">3</div>
+        <span class="step-label">Leistungen</span>
+      </div>
+      <div class="step-line"></div>
+      <div class="step" data-step="4">
+        <div class="step-circle">4</div>
+        <span class="step-label">Kontakt</span>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="krankenkasseForm" novalidate>
+
+      <!-- Step 1: Persönliche Angaben -->
+      <div class="form-step active" data-step="1">
+        <h2>Persönliche Angaben</h2>
+        <p class="step-description">Damit wir Ihnen die besten Angebote zeigen können, benötigen wir einige Angaben zu Ihrer Person.</p>
+
+        <div class="form-group">
+          <label for="geburtsjahr">Geburtsjahr <span class="required">*</span></label>
+          <select id="geburtsjahr" name="geburtsjahr" required>
+            <option value="">Bitte wählen...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="wohnkanton">Wohnkanton <span class="required">*</span></label>
+          <select id="wohnkanton" name="wohnkanton" required>
+            <option value="">Bitte wählen...</option>
+            <option value="AG">Aargau</option>
+            <option value="AI">Appenzell Innerrhoden</option>
+            <option value="AR">Appenzell Ausserrhoden</option>
+            <option value="BE">Bern</option>
+            <option value="BL">Basel-Landschaft</option>
+            <option value="BS">Basel-Stadt</option>
+            <option value="FR">Freiburg</option>
+            <option value="GE">Genf</option>
+            <option value="GL">Glarus</option>
+            <option value="GR">Graubünden</option>
+            <option value="JU">Jura</option>
+            <option value="LU">Luzern</option>
+            <option value="NE">Neuenburg</option>
+            <option value="NW">Nidwalden</option>
+            <option value="OW">Obwalden</option>
+            <option value="SG">St. Gallen</option>
+            <option value="SH">Schaffhausen</option>
+            <option value="SO">Solothurn</option>
+            <option value="SZ">Schwyz</option>
+            <option value="TG">Thurgau</option>
+            <option value="TI">Tessin</option>
+            <option value="UR">Uri</option>
+            <option value="VD">Waadt</option>
+            <option value="VS">Wallis</option>
+            <option value="ZG">Zug</option>
+            <option value="ZH">Zürich</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="plz">PLZ <span class="required">*</span></label>
+            <input type="text" id="plz" name="plz" placeholder="z.B. 8001" maxlength="4" pattern="[0-9]{4}" required>
+          </div>
+          <div class="form-group half">
+            <label for="ort">Ort <span class="required">*</span></label>
+            <input type="text" id="ort" name="ort" placeholder="z.B. Zürich" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Anzahl zu versichernde Personen <span class="required">*</span></label>
+          <div class="card-select personen-select">
+            <div class="card-option" data-value="1">
+              <span class="card-icon">👤</span>
+              <span class="card-label">1 Person</span>
+            </div>
+            <div class="card-option" data-value="2">
+              <span class="card-icon">👥</span>
+              <span class="card-label">2 Personen</span>
+            </div>
+            <div class="card-option" data-value="3-4">
+              <span class="card-icon">👨‍👩‍👧</span>
+              <span class="card-label">3–4 Personen</span>
+            </div>
+            <div class="card-option" data-value="5+">
+              <span class="card-icon">👨‍👩‍👧‍👦</span>
+              <span class="card-label">5+ Personen</span>
+            </div>
+          </div>
+          <input type="hidden" id="anzahlPersonen" name="anzahl_personen" required>
+        </div>
+      </div>
+
+      <!-- Step 2: Aktuelle Versicherung -->
+      <div class="form-step" data-step="2">
+        <h2>Aktuelle Versicherung</h2>
+        <p class="step-description">Teilen Sie uns Ihre aktuelle Versicherungssituation mit, damit wir passende Alternativen finden.</p>
+
+        <div class="form-group">
+          <label for="aktuelleKasse">Aktuelle Krankenkasse <span class="required">*</span></label>
+          <select id="aktuelleKasse" name="aktuelle_krankenkasse" required>
+            <option value="">Bitte wählen...</option>
+            <option value="Agrisano">Agrisano</option>
+            <option value="Aquilana">Aquilana</option>
+            <option value="Assura">Assura</option>
+            <option value="Atupri">Atupri</option>
+            <option value="Avenir">Avenir</option>
+            <option value="Birchmeier">Birchmeier</option>
+            <option value="Compact">Compact</option>
+            <option value="Concordia">Concordia</option>
+            <option value="CSS">CSS</option>
+            <option value="EGK">EGK</option>
+            <option value="Einsiedler">Einsiedler</option>
+            <option value="Galenos">Galenos</option>
+            <option value="Glarner">Glarner</option>
+            <option value="Groupe Mutuel">Groupe Mutuel</option>
+            <option value="Helsana">Helsana</option>
+            <option value="Innova">Innova</option>
+            <option value="KLuG">KLuG</option>
+            <option value="KPT">KPT</option>
+            <option value="Luzerner Hinterland">Luzerner Hinterland</option>
+            <option value="Metallbau">Metallbau</option>
+            <option value="Mutuel Assurance">Mutuel Assurance</option>
+            <option value="ÖKK">ÖKK</option>
+            <option value="Progrès">Progrès</option>
+            <option value="Provita">Provita</option>
+            <option value="rhenusana">rhenusana</option>
+            <option value="Sanitas">Sanitas</option>
+            <option value="Simplon">Simplon</option>
+            <option value="Steffisburg">Steffisburg</option>
+            <option value="Stiftung Krankenkasse Wädenswil">Stiftung Wädenswil</option>
+            <option value="Sumiswalder">Sumiswalder</option>
+            <option value="Swica">Swica</option>
+            <option value="Sympany">Sympany</option>
+            <option value="Visana">Visana</option>
+            <option value="Vita Surselva">Vita Surselva</option>
+            <option value="Vivao Sympany">Vivao Sympany</option>
+            <option value="Andere">Andere</option>
+            <option value="Keine">Keine (Neuzuzug)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="monatlichePraemie">Monatliche Prämie (CHF) <span class="optional">(optional)</span></label>
+          <input type="number" id="monatlichePraemie" name="monatliche_praemie" placeholder="z.B. 350" min="0" max="2000" step="1">
+        </div>
+
+        <div class="form-group">
+          <label>Aktuelle Franchise <span class="required">*</span></label>
+          <div class="radio-group franchise-group">
+            <label class="radio-option">
+              <input type="radio" name="aktuelle_franchise" value="300" required>
+              <span class="radio-label">CHF 300</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="aktuelle_franchise" value="500">
+              <span class="radio-label">CHF 500</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="aktuelle_franchise" value="1000">
+              <span class="radio-label">CHF 1'000</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="aktuelle_franchise" value="1500">
+              <span class="radio-label">CHF 1'500</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="aktuelle_franchise" value="2000">
+              <span class="radio-label">CHF 2'000</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="aktuelle_franchise" value="2500">
+              <span class="radio-label">CHF 2'500</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Unfalldeckung eingeschlossen? <span class="required">*</span></label>
+          <p class="field-hint">Arbeitnehmer mit 8+ Stunden/Woche sind über den Arbeitgeber versichert.</p>
+          <div class="radio-group inline-radio">
+            <label class="radio-option">
+              <input type="radio" name="unfalldeckung" value="Ja" required>
+              <span class="radio-label">Ja</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="unfalldeckung" value="Nein">
+              <span class="radio-label">Nein</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="unfalldeckung" value="Unsicher">
+              <span class="radio-label">Unsicher</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Gewünschte Leistungen -->
+      <div class="form-step" data-step="3">
+        <h2>Gewünschte Leistungen</h2>
+        <p class="step-description">Wählen Sie Ihr bevorzugtes Versicherungsmodell und gewünschte Zusatzleistungen.</p>
+
+        <div class="form-group">
+          <label>Bevorzugtes Versicherungsmodell <span class="required">*</span></label>
+          <div class="card-select modell-select">
+            <div class="card-option" data-value="Standard">
+              <span class="card-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="2"/><path d="M14 8v12M8 14h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <span class="card-label">Standard</span>
+              <span class="card-desc">Freie Arztwahl</span>
+            </div>
+            <div class="card-option" data-value="Hausarzt">
+              <span class="card-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L2 13h3v12h7v-7h4v7h7V13h3L14 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="card-label">Hausarzt</span>
+              <span class="card-desc">Hausarzt als erste Anlaufstelle</span>
+            </div>
+            <div class="card-option" data-value="HMO">
+              <span class="card-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="6" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="14" r="2" fill="currentColor"/><circle cx="18" cy="14" r="2" fill="currentColor"/><circle cx="14" cy="10" r="2" fill="currentColor"/></svg>
+              </span>
+              <span class="card-label">HMO</span>
+              <span class="card-desc">Gruppenpraxis / Netzwerk</span>
+            </div>
+            <div class="card-option" data-value="Telmed">
+              <span class="card-icon">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="2" width="16" height="24" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="20" r="1.5" fill="currentColor"/><line x1="10" y1="6" x2="18" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <span class="card-label">Telmed</span>
+              <span class="card-desc">Telefonische Erstberatung</span>
+            </div>
+          </div>
+          <input type="hidden" id="versicherungsmodell" name="versicherungsmodell" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gewünschte Franchise <span class="required">*</span></label>
+          <div class="radio-group franchise-group">
+            <label class="radio-option">
+              <input type="radio" name="gewuenschte_franchise" value="300" required>
+              <span class="radio-label">CHF 300</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gewuenschte_franchise" value="500">
+              <span class="radio-label">CHF 500</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gewuenschte_franchise" value="1000">
+              <span class="radio-label">CHF 1'000</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gewuenschte_franchise" value="1500">
+              <span class="radio-label">CHF 1'500</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gewuenschte_franchise" value="2000">
+              <span class="radio-label">CHF 2'000</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gewuenschte_franchise" value="2500">
+              <span class="radio-label">CHF 2'500</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Zusatzversicherung gewünscht? <span class="optional">(optional, Mehrfachauswahl)</span></label>
+          <div class="checkbox-group zusatz-group">
+            <label class="checkbox-option">
+              <input type="checkbox" name="zusatzversicherung" value="Spital (halbprivat/privat)">
+              <span class="checkbox-icon">🏥</span>
+              <span class="checkbox-label">Spital halbprivat / privat</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="zusatzversicherung" value="Alternativmedizin">
+              <span class="checkbox-icon">🌿</span>
+              <span class="checkbox-label">Alternativmedizin</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="zusatzversicherung" value="Zahnversicherung">
+              <span class="checkbox-icon">🦷</span>
+              <span class="checkbox-label">Zahnversicherung</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="zusatzversicherung" value="Auslandsdeckung">
+              <span class="checkbox-icon">✈️</span>
+              <span class="checkbox-label">Auslandsdeckung</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="zusatzversicherung" value="Brillen & Kontaktlinsen">
+              <span class="checkbox-icon">👓</span>
+              <span class="checkbox-label">Brillen & Kontaktlinsen</span>
+            </label>
+            <label class="checkbox-option">
+              <input type="checkbox" name="zusatzversicherung" value="Fitness & Prävention">
+              <span class="checkbox-icon">💪</span>
+              <span class="checkbox-label">Fitness & Prävention</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: Kontaktdaten -->
+      <div class="form-step" data-step="4">
+        <h2>Kontaktdaten</h2>
+        <p class="step-description">Fast geschafft! Hinterlassen Sie Ihre Kontaktdaten und wir senden Ihnen die besten Angebote.</p>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="vorname">Vorname <span class="required">*</span></label>
+            <input type="text" id="vorname" name="vorname" placeholder="Max" required>
+          </div>
+          <div class="form-group half">
+            <label for="nachname">Nachname <span class="required">*</span></label>
+            <input type="text" id="nachname" name="nachname" placeholder="Muster" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-Mail <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="max.muster@beispiel.ch" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefon">Telefonnummer <span class="required">*</span></label>
+          <input type="tel" id="telefon" name="telefon" placeholder="079 123 45 67" required>
+        </div>
+
+        <div class="form-group">
+          <label>Bevorzugte Kontaktart <span class="required">*</span></label>
+          <div class="card-select kontakt-select">
+            <div class="card-option" data-value="Telefon">
+              <span class="card-icon">📞</span>
+              <span class="card-label">Telefon</span>
+            </div>
+            <div class="card-option" data-value="Video">
+              <span class="card-icon">📹</span>
+              <span class="card-label">Video</span>
+            </div>
+            <div class="card-option" data-value="E-Mail">
+              <span class="card-icon">📧</span>
+              <span class="card-label">E-Mail</span>
+            </div>
+          </div>
+          <input type="hidden" id="kontaktart" name="bevorzugte_kontaktart" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bemerkungen">Bemerkungen <span class="optional">(optional)</span></label>
+          <textarea id="bemerkungen" name="bemerkungen" rows="3" placeholder="Haben Sie besondere Wünsche oder Fragen?"></textarea>
+        </div>
+
+        <div class="form-group consent-group">
+          <label class="checkbox-option consent-checkbox">
+            <input type="checkbox" id="consent" name="einwilligung" required>
+            <span class="checkbox-label">Ich bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage verwendet werden. <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Success Screen -->
+      <div class="form-step success-screen" data-step="success">
+        <div class="success-icon">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <circle cx="40" cy="40" r="38" stroke="#38a169" stroke-width="3"/>
+            <path d="M24 42l10 10 22-24" stroke="#38a169" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Vielen Dank!</h2>
+        <p class="success-text">Ihre Anfrage wurde erfolgreich gesendet. Wir vergleichen jetzt die besten Krankenkassen-Angebote für Sie und melden uns innerhalb von 24 Stunden.</p>
+        <div class="success-info">
+          <div class="info-item">
+            <span class="info-icon">✓</span>
+            <span>Kostenlos & unverbindlich</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✓</span>
+            <span>Bis zu 60% Prämien sparen</span>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✓</span>
+            <span>Persönliche Beratung</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="form-nav" id="formNav">
+        <button type="button" class="btn btn-back" id="btnBack" style="display:none;">Zurück</button>
+        <button type="button" class="btn btn-next" id="btnNext">Weiter</button>
+        <button type="submit" class="btn btn-submit" id="btnSubmit" style="display:none;">
+          <span class="btn-text">Vergleich anfordern</span>
+          <span class="btn-loading" style="display:none;">
+            <svg class="spinner" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="2.5" fill="none" stroke-dasharray="40" stroke-dashoffset="10"/></svg>
+            Wird gesendet...
+          </span>
+        </button>
+      </div>
+    </form>
+
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="badge">
+        <span class="badge-icon">🔒</span>
+        <span>SSL-verschlüsselt</span>
+      </div>
+      <div class="badge">
+        <span class="badge-icon">🇨🇭</span>
+        <span>Schweizer Service</span>
+      </div>
+      <div class="badge">
+        <span class="badge-icon">⭐</span>
+        <span>100% kostenlos</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="form-footer">
+      <a href="impressum.html">Impressum</a>
+      <span>|</span>
+      <a href="datenschutz.html">Datenschutz</a>
+      <span>|</span>
+      <span>&copy; 2026 krankenkasse-finden.ch</span>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
