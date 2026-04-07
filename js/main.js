@@ -41,6 +41,8 @@
           hiddenInput.value = card.getAttribute('data-value');
           hiddenInput.classList.remove('invalid');
         }
+        // Clear invalid state from card group
+        group.classList.remove('invalid');
       });
     });
   });
@@ -78,11 +80,32 @@
         return;
       }
       if (!input.value.trim()) {
-        input.classList.add('invalid');
-        valid = false;
-        if (!firstInvalid) firstInvalid = input;
+        // For hidden inputs linked to card-select, highlight the card group
+        if (input.type === 'hidden') {
+          var cardGroup = input.previousElementSibling;
+          while (cardGroup && !cardGroup.classList.contains('card-select')) {
+            cardGroup = cardGroup.previousElementSibling;
+          }
+          if (cardGroup) {
+            cardGroup.classList.add('invalid');
+            valid = false;
+            if (!firstInvalid) firstInvalid = cardGroup;
+          }
+        } else {
+          input.classList.add('invalid');
+          valid = false;
+          if (!firstInvalid) firstInvalid = input;
+        }
       } else {
         input.classList.remove('invalid');
+        // Also clear card-select invalid state
+        if (input.type === 'hidden') {
+          var cardGroup = input.previousElementSibling;
+          while (cardGroup && !cardGroup.classList.contains('card-select')) {
+            cardGroup = cardGroup.previousElementSibling;
+          }
+          if (cardGroup) cardGroup.classList.remove('invalid');
+        }
       }
     });
 

@@ -257,7 +257,9 @@ textarea:focus {
 }
 
 input.invalid,
-select.invalid {
+select.invalid,
+.card-select.invalid,
+.radio-group.invalid {
   border-color: var(--red);
   box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
   animation: shake 0.35s ease;
